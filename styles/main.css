@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  background: #000;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.section {
+  width: 100%;
+  padding: 30px;
+}
+.form, #comments-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.section-title {
+  color: #fff;
+  text-align: center;
+  margin: 15px 0;
+}
+.form-input {
+  padding: 5px 8px;
+  margin: 15px 0;
+  width: 50%;
+  font-family: inherit;
+  background: #fff;
+  color: #000;
+  border: none;
+  outline: none;
+}
+.form-input.error {
+  outline: 1px solid #f00;
+}
+#form-text-success {
+  color: #fff;
+  margin: 15px 0;
+  visibility: hidden;
+}
+#form-text-success.active {
+  visibility: visible;
+}
+.section-button {
+  padding: 8px;
+  margin: 15px 0;
+  cursor: pointer;
+  background: #fff;
+  color: #000;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+}
+.section-button:hover {
+  opacity: 0.85;
+}
+.comments-block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.comments-text {
+  margin: 15px 0;
+  background: #fff;
+  color: #000;
+  padding: 5px 8px;
+  word-break: break-all;
+}
+.pagination-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 15px 0;
+}
+.pagination-link {
+  color: #fff;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.pagination-link.disabled {
+  opacity: 0.5;
+}
+.pagination-link:hover {
+  opacity: 0.85;
+}
+.pagination-link.disabled:hover {
+  cursor: default;
+  opacity: 0.5;
+}
+.pagination-link.active {
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+  .section {
+    padding: 20px;
+  }
+  .section-title {
+    font-size: 24px;
+  }
+  .form-input {
+    width: 75%;
+  }
+  .section-title, .form-input, .section-button, #form-text-success, .comments-text, .pagination-block {
+    margin: 10px 0;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+  .section {
+    padding: 10px;
+  }
+  .section-title {
+    font-size: 20px;
+  }
+  .form-input {
+    width: 100%;
+  }
+}
